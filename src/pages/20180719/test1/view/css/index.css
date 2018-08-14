@@ -1,0 +1,23 @@
+a{
+    text-decoration: none;
+}
+.page-link{
+	text-decoration: none;
+	color: #fff;
+}
+.img-list{
+	display: flex;
+	flex-direction:row;
+	justify-content: space-between;
+}
+.img-list .img-box{
+	float: left;
+	background-color: #19C3FF;
+}
+.img-list .img-box p{
+	margin: 50px 50px;
+}
+img{
+	width: 10px;
+	height: 10px;
+}
