@@ -17,6 +17,8 @@
 			  	<div id="componentsCount">
 				  	<button-count></button-count>
 				</div>
+				<el-button v-on:click="say('Hello')" type="success">Say Hello</el-button>
+				<el-button v-on:click="warn('From cannot be submitted yet.',$sevent)" type="success">Submit</el-button>
 			  </el-main>
 			</div>
 		</el-col>
@@ -34,6 +36,16 @@
 				message:'Hello',
 				firstName: 'Foo',
     			lastName: 'Bar',
+			}
+		},
+		methods:{
+			say:function(message){
+				alert(message);
+			},
+			warn:function(message,event){
+				//现在我们可以访问原生对象
+				if(event) event.preventDefault()
+					alert(message);
 			}
 		},
 		computed:{
