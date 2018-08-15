@@ -18,7 +18,9 @@
 				  	<button-count></button-count>
 				</div>
 				<el-button v-on:click="say('Hello')" type="success">Say Hello</el-button>
-				<el-button v-on:click="warn('From cannot be submitted yet.',$sevent)" type="success">Submit</el-button>
+				<el-button native-type="submit" v-on:click="warn('From cannot be submitted yet.',$sevent)" type="success">Submit</el-button>
+				<el-button native-type="submit" type="success">Submit</el-button>
+
 			  </el-main>
 			</div>
 		</el-col>
