@@ -17,10 +17,11 @@
 			  	<div id="componentsCount">
 				  	<button-count></button-count>
 				</div>
-				<el-button v-on:click="say('Hello')" type="success">Say Hello</el-button>
+				<el-button v-on:click.once="say('Hell0')" type="success">Say Hello</el-button>
 				<el-button native-type="submit" v-on:click="warn('From cannot be submitted yet.',$sevent)" type="success">Submit</el-button>
 				<el-button native-type="submit" type="success">Submit</el-button>
-
+				<button v-on:click="plus">{{ a }}</button>
+				<input v-on:keyup.space="plus" value="">
 			  </el-main>
 			</div>
 		</el-col>
@@ -38,6 +39,7 @@
 				message:'Hello',
 				firstName: 'Foo',
     			lastName: 'Bar',
+    			a:0
 			}
 		},
 		methods:{
@@ -48,7 +50,8 @@
 				//现在我们可以访问原生对象
 				if(event) event.preventDefault()
 					alert(message);
-			}
+			},
+			plus:function(){a = 111;}
 		},
 		computed:{
 			reversedMessage:function(){
